@@ -28,5 +28,3 @@ def shift_numbers_affine(numbers: list, a: int, b: int) -> list:
     for i in range (0, len(numbers)):
         numbers[i] = ((a * numbers[i]) + b) % 26
     return numbers
-
-print(encrypt('HELLOWORLD', 5, 8))
