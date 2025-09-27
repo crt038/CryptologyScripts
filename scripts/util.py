@@ -56,12 +56,78 @@ def convert_letter_to_num(letter: str) -> int:
     else:
         return -1
     
-def convert_string_to_number_list(plaintext: str) -> list:
-    number_list = list()
-    for i in range (0, len(plaintext)):
-        num = convert_letter_to_num(plaintext[i])
+def convert_string_to_number_list(string: str) -> list[int]:
+    number_list: list[int] = list()
+    for i in range (0, len(string)):
+        num = convert_letter_to_num(string[i])
         if num != -1:
             number_list.append(num)
         else:
             raise ValueError('Invalid character in input string: Input string must only include alphabetic characters.')
     return number_list
+
+def convert_num_to_letter(num: int) -> str:
+    if num == 0:
+        return 'A'
+    elif num == 1:
+        return 'B'
+    elif num == 2:
+        return 'C'
+    elif num == 3:
+        return 'D'
+    elif num == 4:
+        return 'E'
+    elif num == 5:
+        return 'F'
+    elif num == 6:
+        return 'G'
+    elif num == 7:
+        return 'H'
+    elif num == 8:
+        return 'I'
+    elif num == 9:
+        return 'J'
+    elif num == 10:
+        return 'K'
+    elif num == 11:
+        return 'L'
+    elif num == 12:
+        return 'M'
+    elif num == 13:
+        return 'N'
+    elif num == 14:
+        return 'O'
+    elif num == 15:
+        return 'P'
+    elif num == 16:
+        return 'Q'
+    elif num == 17:
+        return 'R'
+    elif num == 18:
+        return 'S'
+    elif num == 19:
+        return 'T'
+    elif num == 20:
+        return 'U'
+    elif num == 21:
+        return 'V'
+    elif num == 22:
+        return 'W'
+    elif num == 23:
+        return 'X'
+    elif num == 24:
+        return 'Y'
+    elif num == 25:
+        return 'Z'
+    else:
+        return 'CONVERSIONPROBLEM'
+
+def convert_number_list_to_string(number_list: list[int]) -> str:
+    string = ''
+    for i in range (0, len(number_list)):
+        letter = convert_num_to_letter(number_list[i])
+        if letter != 'CONVERSIONPROBLEM':
+            string += letter
+        else:
+            raise ValueError('Invalid number in input list: Numbers must be from 0 to 25 (inclusive).')
+    return string
