@@ -7,7 +7,7 @@ def encrypt(plaintext: str, key: int) -> str:
     except ValueError as e:
         print(e)
         sys.exit(1)
-    shifted_plaintext_numbers = shift_numbers(plaintext_numbers, key)
+    shifted_plaintext_numbers = shift_numbers_caesar(plaintext_numbers, key)
     try:
         return util.convert_number_list_to_string(shifted_plaintext_numbers)
     except ValueError as e:
@@ -21,7 +21,8 @@ def decrypt_with_known_key(ciphertext: str, key: int) -> str:
         print(e)
         sys.exit(1)
     reversed_key = (26 - key) % 26
-    shifted_ciphertext_numbers = shift_numbers(ciphertext_numbers, reversed_key)
+    shifted_ciphertext_numbers = shift_numbers_caesar(ciphertext_numbers,
+                                                      reversed_key)
     try:
         return util.convert_number_list_to_string(shifted_ciphertext_numbers)
     except ValueError as e:
@@ -33,8 +34,8 @@ def decrypt_brute_force(ciphertext: str) -> str:
     for i in range (0, 26):
         print(decrypt_with_known_key(ciphertext, i) + '\n')
     return 'Brute force complete.'
-    
-def shift_numbers(numbers: list, shift: int) -> list:
+
+def shift_numbers_caesar(numbers: list, shift: int) -> list:
     for i in range (0, len(numbers)):
         numbers[i] = (numbers[i] + shift) % 26
     return numbers
