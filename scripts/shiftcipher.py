@@ -18,5 +18,3 @@ def shift_numbers(numbers: list, shift: int) -> list:
     for i in range (0, len(numbers)):
         numbers[i] = (numbers[i] + shift) % 26
     return numbers
-
-print(encrypt('HELLOWORLD', 3))
