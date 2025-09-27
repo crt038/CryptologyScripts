@@ -63,6 +63,5 @@ def convert_string_to_number_list(plaintext: str) -> list:
         if num != -1:
             number_list.append(num)
         else:
-            print('Invalid character in input string: Input string must only include alphabetic characters.\n')
-            return
+            raise ValueError('Invalid character in input string: Input string must only include alphabetic characters.')
     return number_list
