@@ -4,3 +4,4 @@ This repository is a collection of scripts that reflect the functionality of som
 ## Systems That I am Thinking of Implementing and/or Those Which I Have Already Finished
 - [**Shift (Caesar) Cipher**](https://github.com/crt038/CryptologyScripts/blob/main/scripts/shiftcipher.py)
 - [Affine Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/affinecipher.py)
+- [Vigenere Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/vigenere.py)
