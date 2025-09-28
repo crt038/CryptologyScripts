@@ -70,7 +70,7 @@ def main():
         - So, do not try to use both options when decrypting.
         - Also, do not try to use the bruteforce option when encrypting.
     ''')
-    usagestring = textwrap.dedent('%(prog)s encrypt|decrypt <text> ( --bruteforce | --key )')
+    usagestring = textwrap.dedent('%(prog)s encrypt|decrypt <text> ( --bruteforce | --key KEY)')
     parser = argparse.ArgumentParser(prog='shiftcipher.py', usage=usagestring,
                                      description=descriptionstring,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
