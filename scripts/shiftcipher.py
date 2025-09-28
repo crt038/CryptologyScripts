@@ -1,7 +1,6 @@
 import sys
 import util
 
-
 def encrypt(plaintext: str, key: int) -> str:
     try:
         plaintext_numbers = util.convert_string_to_number_list(plaintext)
