@@ -24,7 +24,7 @@ def encrypt(plaintext: str, a: int, b: int) -> str:
 def decrypt_with_known_key(ciphertext: str, a: int, b: int) -> str:
     return 'NOT YET IMPLEMENTED!'
 
-def shift_numbers_affine(numbers: list, a: int, b: int) -> list:
+def shift_numbers_affine(numbers: list[int], a: int, b: int) -> list[int]:
     for i in range (0, len(numbers)):
         numbers[i] = ((a * numbers[i]) + b) % 26
     return numbers

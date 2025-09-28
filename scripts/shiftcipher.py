@@ -1,6 +1,7 @@
 import sys
 import util
 
+
 def encrypt(plaintext: str, key: int) -> str:
     try:
         plaintext_numbers = util.convert_string_to_number_list(plaintext)
@@ -35,7 +36,31 @@ def decrypt_brute_force(ciphertext: str) -> str:
         print(decrypt_with_known_key(ciphertext, i) + '\n')
     return 'Brute force complete.'
 
-def shift_numbers_caesar(numbers: list, shift: int) -> list:
+def shift_numbers_caesar(numbers: list[int], shift: int) -> list[int]:
     for i in range (0, len(numbers)):
         numbers[i] = (numbers[i] + shift) % 26
     return numbers
+
+def main():
+    while (1):
+        desire = input('Would you like to (encrypt/decrypt)?: ')
+        desire = desire.lower()
+        if desire != 'encrypt' and desire != 'decrypt':
+            print('Invalid input: The choices are (encrypt/decrypt).')
+            continue
+        text = input('Enter your desired plaintext/ciphertext: ')
+        key = input('Enter your key/shift amount: ')
+        if desire == 'encrypt':
+            print('Encrypted Text: ' + encrypt(text, int(key)))
+        else:
+            print(decrypt_with_known_key(text, int(key)))
+        again = input('Would you like to try other values (y/n)?: ')
+        again = again.lower()
+        if again == 'y':
+            continue
+        else:
+            print('Goodbye!')
+            sys.exit(1)
+            
+if __name__ == '__main__':
+    main()
