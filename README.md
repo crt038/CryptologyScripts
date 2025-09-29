@@ -1,5 +1,5 @@
 # Cryptology Scripts
-This repository is a collection of scripts that reflect the functionality of some cryptographic systems, namely encryption and (some) decryption methods. More specifically, this is based upon the material covered by [Hatice Sahinoglu](https://www-math.umd.edu/people/lecturers/item/1372-hsahinog.html) in CMSC456: Cryptography at the University of Maryland, College Park, during the Fall 2025 semester.
+This repository is a collection of Python scripts that reflect the functionality of some cryptographic systems. More specifically, this is based upon the material covered by [Hatice Sahinoglu](https://www-math.umd.edu/people/lecturers/item/1372-hsahinog.html) in CMSC456: Cryptography at the University of Maryland, College Park, during the Fall 2025 semester.
 
 ## Quickstart Guide
 1. Install the [latest version of Python for your OS](https://www.python.org/downloads)
