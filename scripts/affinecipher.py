@@ -77,3 +77,9 @@ def decrypt_with_known_key(ciphertext: str, a: int, b: int) -> str:
     except ValueError as e:
         print(e)
         sys.exit(1)  
+
+def main():
+    print('CLI TOOLS ARE NOT READY YET!')
+
+if __name__ == '__main__':
+    main()
