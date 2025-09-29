@@ -31,6 +31,16 @@ def affine_modular_inverse(a: int) -> int:
         return 25
     else:
         return -1
+    
+def encrypt_numbers_affine(numbers: list[int], a: int, b: int) -> list[int]:
+    for i in range (0, len(numbers)):
+        numbers[i] = ((a * numbers[i]) + b) % 26
+    return numbers
+
+def decrypt_numbers_affine(numbers: list[int], a: int, b: int) -> list[int]:
+    for i in range (0, len(numbers)):
+        numbers[i] = (a * (numbers[i] - b)) % 26
+    return numbers
 
 def encrypt(plaintext: str, a: int, b: int) -> str:
     if not is_valid_affine_key(a, b):
@@ -66,14 +76,4 @@ def decrypt_with_known_key(ciphertext: str, a: int, b: int) -> str:
         return util.convert_number_list_to_string(shifted_ciphertext_numbers)
     except ValueError as e:
         print(e)
-        sys.exit(1)
-    
-def encrypt_numbers_affine(numbers: list[int], a: int, b: int) -> list[int]:
-    for i in range (0, len(numbers)):
-        numbers[i] = ((a * numbers[i]) + b) % 26
-    return numbers
-
-def decrypt_numbers_affine(numbers: list[int], a: int, b: int) -> list[int]:
-    for i in range (0, len(numbers)):
-        numbers[i] = (a * (numbers[i] - b)) % 26
-    return numbers
+        sys.exit(1)  

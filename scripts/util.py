@@ -56,16 +56,6 @@ def convert_letter_to_num(letter: str) -> int:
     else:
         return -1
     
-def convert_string_to_number_list(string: str) -> list[int]:
-    number_list: list[int] = list()
-    for i in range (0, len(string)):
-        num = convert_letter_to_num(string[i])
-        if num != -1:
-            number_list.append(num)
-        else:
-            raise ValueError('Invalid character in input string: Input string must only include alphabetic characters.')
-    return number_list
-
 def convert_num_to_letter(num: int) -> str:
     if num == 0:
         return 'A'
@@ -121,6 +111,16 @@ def convert_num_to_letter(num: int) -> str:
         return 'Z'
     else:
         return 'CONVERSIONPROBLEM'
+    
+def convert_string_to_number_list(string: str) -> list[int]:
+    number_list: list[int] = list()
+    for i in range (0, len(string)):
+        num = convert_letter_to_num(string[i])
+        if num != -1:
+            number_list.append(num)
+        else:
+            raise ValueError('Invalid character in input string: Input string must only include alphabetic characters.')
+    return number_list
 
 def convert_number_list_to_string(number_list: list[int]) -> str:
     string = ''

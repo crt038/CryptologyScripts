@@ -3,6 +3,11 @@ import util
 import argparse
 import textwrap
 
+def shift_numbers_caesar(numbers: list[int], shift: int) -> list[int]:
+    for i in range (0, len(numbers)):
+        numbers[i] = (numbers[i] + shift) % 26
+    return numbers
+
 def encrypt(plaintext: str, key: int) -> str:
     try:
         plaintext_numbers = util.convert_string_to_number_list(plaintext)
@@ -36,11 +41,6 @@ def decrypt_brute_force(ciphertext: str) -> str:
     for i in range (0, 26):
         print(f'{decrypt_with_known_key(ciphertext, i)} (key = {i})\n')
     return 'Brute force complete.'
-
-def shift_numbers_caesar(numbers: list[int], shift: int) -> list[int]:
-    for i in range (0, len(numbers)):
-        numbers[i] = (numbers[i] + shift) % 26
-    return numbers
 
 def main():
     descriptionstring = textwrap.dedent('''\
