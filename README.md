@@ -9,6 +9,6 @@ This repository is a collection of scripts that reflect the functionality of som
 can still open the scripts, put in some print statements, and see output that way
 
 ## Systems That I am Thinking of Implementing and/or Those Which I Have Already Finished
-- [Shift (Caesar) Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/shiftcipher.py)
-- [Affine Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/affinecipher.py)
-- [Vigenere Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/vigenere.py)
+- [Shift (Caesar) Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/shiftcipher.py) (supports CLI usage)
+- [Affine Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/affinecipher.py) (does NOT YET support CLI usage)
+- [Vigenere Cipher](https://github.com/crt038/CryptologyScripts/blob/main/scripts/vigenere.py) (does NOT YET support CLI usage)
